@@ -20,6 +20,8 @@ html{
     box-sizing: border-box;
     -webkit-font-smoothing:antialiased;
 }
+
+
 header{
     background: var(--dark);
     clip-path:polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100% );
@@ -30,6 +32,29 @@ header{
     max-width: 1152px;
     padding:0 15px;
     margin:0 auto; 
+}
+
+@media(min-width:576px){
+    .container{
+        max-width:540px;
+    }
+}
+
+@media(min-width:768px){
+    .container{
+        max-width:720px;
+    }
+}
+@media(min-width:992px){
+    .container{
+        max-width:960px;
+    }
+}
+
+@media(min-width:1200px){
+    .container{
+        max-width:1152px;
+    }
 }
 
 header nav .left a{
@@ -409,19 +434,19 @@ footer{
     padding:5rem 0;
 }
 footer .footer-logo{
-    /* margin-bottom:3rem; */
+     /* margin-bottom:3rem;  */
     width: 500px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
 }
-/* footer .footer-socials a{
+ /* footer .footer-socials a{
     margin-right:1rem;
     margin-right:-1rem;
 
 
-} */
+}  */
 .footer-socials {
     display: flex;
     justify-content: center;
@@ -438,10 +463,10 @@ footer .footer-logo{
     height: 100%;
     cursor: pointer;
 }
-/* footer .footer-socials{
+ /* footer .footer-socials{
     margin-bottom:3rem;
     display: flex;
-} */
+}  */
 .footer-logos img{
     width: 25px;
     height: 25px;
@@ -449,11 +474,7 @@ footer .footer-logo{
 footer .copy-right{
     color:var(--ternary);
 }
-@media (max-width:1024px){
-    header #main-nav{
-        display: none;
-    }
-}
+
 .site-main-wrapper{
     position:relative;
 }
@@ -506,3 +527,45 @@ footer .copy-right{
     text-decoration: none;
     font-size: 2rem;
 }
+
+.img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+@media (max-width:1024px){
+    header #main-nav{
+        display: none;
+    }
+
+    .hero .left img{
+        
+        width:260px;
+    }
+    .hero .right h1{
+        font-size:3rem;
+    }
+    .hero{
+        padding-bottom: 10rem;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 89%, 0 100%);
+    }
+    section .about .about-me-img{
+        height:360px;
+    }
+    section.services .card-wrapper {
+
+    grid-template-columns: repeat(2 ,1fr);
+}
+section.blog .card-wrapper {
+    grid-template-columns: repeat(1 ,1fr);
+
+}
+
+   section.work .card-wrapper {
+     grid-template-columns: repeat(2 ,1fr);
+   }
+}
+
